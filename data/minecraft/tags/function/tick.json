@@ -1,0 +1,12 @@
+{
+    "values": [
+        "tulip:main",
+        "tulip_biome:main",
+        "tulip_currency:main",
+        "tulip_housing:main",
+        "tulip_item:main",
+        "tulip_quest:main",
+        "tulip_skill:main",
+        "tulip_transport:main"
+    ]
+}

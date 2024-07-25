@@ -1,0 +1,1 @@
+{"display":{"title":{"text":"Cool quest (quest)"},"description":{"text":"Quest 1"},"icon":{"id":"minecraft:emerald"},"show_toast":false,"announce_to_chat":false,"hidden":true},"criteria":{"stone":{"trigger":"minecraft:inventory_changed","conditions":{"items":[{"items":["minecraft:stone"]}]}}},"rewards":{"function":"tulip_quest:system/quest/1/end_check"}}

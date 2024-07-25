@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "#": {
+            "item": "minecraft:air"
+        }
+    },
+    "pattern": [
+        "#"
+    ],
+    "result": {
+        "item": "minecraft:barrier"
+    }
+}

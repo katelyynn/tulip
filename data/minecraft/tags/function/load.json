@@ -1,0 +1,13 @@
+{
+    "values": [
+        "kate:load",
+        "tulip:load",
+        "tulip_biome:load",
+        "tulip_currency:load",
+        "tulip_housing:load",
+        "tulip_item:load",
+        "tulip_quest:load",
+        "tulip_skill:load",
+        "tulip_transport:load"
+    ]
+}

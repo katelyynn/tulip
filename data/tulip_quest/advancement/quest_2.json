@@ -1,0 +1,1 @@
+{"display":{"title":{"text":"mfw bread (quest)"},"description":{"text":"Quest 2"},"icon":{"id":"minecraft:emerald"},"show_toast":false,"announce_to_chat":false,"hidden":true},"criteria":{"stone":{"trigger":"minecraft:consume_item","description":"Eat some bread","conditions":{"items":[{"items":["minecraft:bread"]}]}}},"rewards":{"function":"tulip_quest:system/quest/2/end_check"}}
