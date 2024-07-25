@@ -11,3 +11,7 @@ this datapack contains many sub-datapacks in the `data` folder, those used to be
 - `tulip_quest`
 - `tulip_skill`
 - `tulip_transport`
+
+---
+
+tulip is created by kate from 2022-2024
