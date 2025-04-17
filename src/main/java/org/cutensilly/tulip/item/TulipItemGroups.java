@@ -9,14 +9,14 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.cutensilly.tulip.Tulip;
 
-public class ModItemGroups {
+public class TulipItemGroups {
 
     public static final ItemGroup TULIP_ACCESSORIES = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Tulip.MOD_ID, "tulip_accessories"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ESTROGEN))
+            FabricItemGroup.builder().icon(() -> new ItemStack(TulipItems.ESTROGEN))
                     .displayName(Text.translatable("itemgroup.tulip.accessories"))
                     .entries(((displayContext, entries) -> {
-                        entries.add(ModItems.ESTROGEN);
+                        entries.add(TulipItems.ESTROGEN);
                     }))
                     .build());
 

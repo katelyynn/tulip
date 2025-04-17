@@ -2,8 +2,8 @@ package org.cutensilly.tulip;
 
 import net.fabricmc.api.ModInitializer;
 
-import org.cutensilly.tulip.item.ModItemGroups;
-import org.cutensilly.tulip.item.ModItems;
+import org.cutensilly.tulip.item.TulipItemGroups;
+import org.cutensilly.tulip.item.TulipItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +17,7 @@ public class Tulip implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.registerModItems();
-		ModItemGroups.registerItemGroups();
+		TulipItems.registerModItems();
+		TulipItemGroups.registerItemGroups();
 	}
 }

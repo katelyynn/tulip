@@ -10,7 +10,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.cutensilly.tulip.Tulip;
 
-public class ModItems {
+public class TulipItems {
 
     public static final Item ESTROGEN = registerItem("estrogen", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Tulip.MOD_ID, "estrogen")))));
 
