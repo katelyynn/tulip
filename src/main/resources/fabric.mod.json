@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tulip",
+	"version": "${version}",
+	"name": "tulip",
+	"description": "cuteness",
+	"authors": [
+		"claire"
+	],
+	"contact": {
+		"homepage": "https://cutensilly.org",
+		"sources": "https://github.com/katelyynn/tulip"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tulip/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.cutensilly.tulip.Tulip"
+		],
+		"fabric-datagen": [
+			"org.cutensilly.tulip.TulipDataGenerator"
+		],
+		"client": [
+			"org.cutensilly.tulip.TulipClient"
+		]
+	},
+	"mixins": [
+		"tulip.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
