@@ -1,4 +1,11 @@
 {
   "item.tulip.estrogen": "Estrogen",
-  "itemgroup.tulip.accessories": "Accessories"
+  "itemgroup.tulip.accessories": "Accessories",
+  "rarity.tulip.common": "Common",
+  "rarity.tulip.uncommon": "Uncommon",
+  "rarity.tulip.rare": "Rare",
+  "rarity.tulip.epic": "Epic",
+  "rarity.tulip.legendary": "Legendary",
+  "rarity.tulip.mythic": "Mythic",
+  "rarity.tulip.special": "Special"
 }

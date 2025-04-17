@@ -9,10 +9,13 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.cutensilly.tulip.Tulip;
+import org.cutensilly.tulip.component.TulipDataComponentTypes;
 
 public class TulipItems {
 
-    public static final Item ESTROGEN = registerItem("estrogen", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Tulip.MOD_ID, "estrogen")))));
+    public static final Item ESTROGEN = registerItem("estrogen", new Item(new Item.Settings()
+            .component(TulipDataComponentTypes.RARITY, "common")
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Tulip.MOD_ID, "estrogen")))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Tulip.MOD_ID, name), item);

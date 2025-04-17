@@ -2,6 +2,10 @@ package org.cutensilly.tulip;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+import org.cutensilly.tulip.component.TulipDataComponentTypes;
 import org.cutensilly.tulip.item.TulipItemGroups;
 import org.cutensilly.tulip.item.TulipItems;
 import org.slf4j.Logger;
@@ -19,5 +23,28 @@ public class Tulip implements ModInitializer {
 	public void onInitialize() {
 		TulipItems.registerModItems();
 		TulipItemGroups.registerItemGroups();
+
+		TulipDataComponentTypes.registerDataComponentTypes();
+
+		// TODO: once docs are updated, move this to component
+		ItemTooltipCallback.EVENT.register(((itemStack, tooltipContext, tooltipType, list) -> {
+			boolean hasRarity = itemStack.contains(TulipDataComponentTypes.RARITY);
+			if (hasRarity) {
+				var rarity = itemStack.get(TulipDataComponentTypes.RARITY);
+
+                assert rarity != null;
+                var rarityColour = switch (rarity) {
+                    case "uncommon" -> Formatting.GREEN;
+                    case "rare" -> Formatting.BLUE;
+                    case "epic" -> Formatting.DARK_PURPLE;
+                    case "legendary" -> Formatting.GOLD;
+                    case "mythic" -> Formatting.LIGHT_PURPLE;
+                    case "special" -> Formatting.RED;
+                    default -> Formatting.GRAY;
+                };
+
+				list.add(Text.translatable(String.format("rarity.tulip.%s", rarity)).formatted(rarityColour));
+			}
+		}));
 	}
 }
