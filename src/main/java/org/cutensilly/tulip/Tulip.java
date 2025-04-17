@@ -3,6 +3,8 @@ package org.cutensilly.tulip;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import org.cutensilly.tulip.component.TulipDataComponentTypes;
@@ -43,7 +45,10 @@ public class Tulip implements ModInitializer {
                     default -> Formatting.GRAY;
                 };
 
-				list.add(Text.translatable(String.format("rarity.tulip.%s", rarity)).formatted(rarityColour));
+				MutableText mutable = Text.translatable(String.format("rarity.tulip.%s", rarity))
+						.withColor(16724480);
+
+				list.add(mutable);
 			}
 		}));
 	}
