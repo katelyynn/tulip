@@ -35,19 +35,20 @@ public class Tulip implements ModInitializer {
 				var rarity = itemStack.get(TulipDataComponentTypes.RARITY);
 
                 assert rarity != null;
-                var rarityColour = switch (rarity) {
-                    case "uncommon" -> Formatting.GREEN;
-                    case "rare" -> Formatting.BLUE;
-                    case "epic" -> Formatting.DARK_PURPLE;
-                    case "legendary" -> Formatting.GOLD;
-                    case "mythic" -> Formatting.LIGHT_PURPLE;
-                    case "special" -> Formatting.RED;
-                    default -> Formatting.GRAY;
+                int rarityColour = switch (rarity) {
+                    case "uncommon" -> 9089377;
+                    case "rare" -> 6852573;
+                    case "epic" -> 8939995;
+                    case "legendary" -> 14721100;
+                    case "mythic" -> 15231451;
+                    case "special" -> 14374770;
+                    default -> 9933455;
                 };
 
 				MutableText mutable = Text.translatable(String.format("rarity.tulip.%s", rarity))
-						.withColor(16724480);
+						.withColor(rarityColour);
 
+				list.add(Text.literal(""));
 				list.add(mutable);
 			}
 		}));
